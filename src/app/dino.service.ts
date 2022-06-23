@@ -1,4 +1,4 @@
-import { dino, dino_data, dino_strapi, dino_strapi_array, dino_strapi_out, era_strapi } from './dinos';
+import { dino, dino_data, dino_strapi, dino_strapi_array } from './dinos';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {lastValueFrom } from 'rxjs';
@@ -69,13 +69,5 @@ export class DinoService{
 
     deleteDino(dinoId: number){
         return lastValueFrom(this.http.delete<dino_data>(this.urlBase + '/api/dinosaurs/' + dinoId));
-    }
-
-    getEra(eraId: number) {
-        return lastValueFrom(this.http.get<era_strapi>(this.urlBase + '/api/eras/' + eraId + '?populate=*'));
-    }
-
-    getEras() {
-        return lastValueFrom(this.http.get<era_strapi[]>(this.urlBase + '/api/eras?populate=*'));
     }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { dino, era, era_data } from '../dinos';
+import { dino } from '../dinos';
 import { Router } from '@angular/router';
 import { DinoService } from "../dino.service"
 
