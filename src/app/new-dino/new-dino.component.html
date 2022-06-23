@@ -1,0 +1,39 @@
+<p>Add a new dinosaur</p>
+
+
+<div class="block">
+    <label>Name: </label>
+    <input type="text" [(ngModel)]="dinosaur.name"/>
+</div>
+
+<div class="block">
+    <label>Era: </label>
+    <select Name="Name_of_list_box" [(ngModel)]="dinosaur.eraId" Size="Number_of_options">  
+        <option  [ngValue]="2"> Permian </option>  
+        <option  [ngValue]="3"> Triassic </option>  
+        <option  [ngValue]="1"> Jurassic </option>  
+        <option  [ngValue]="4"> Cretaceous </option>  
+      </select>  
+</div>
+
+<div class="block">
+    <label>Scientific Name: </label>
+    <input type="text" [(ngModel)]="dinosaur.fancyName"/>
+</div>
+
+<div class="block">
+    <label>Described: </label>
+    <input type="number" [(ngModel)]="dinosaur.described" />
+</div>
+
+<div class="block">
+    <label>Coolness: </label>
+    <input type="text" [(ngModel)]="dinosaur.coolness" />
+</div>
+
+<div class="block">
+    <label>Image Url: </label>
+    <input type="text" [(ngModel)]="dinosaur.imageUrl" />
+</div>
+
+<button (click)="AddDino()" >Add</button>

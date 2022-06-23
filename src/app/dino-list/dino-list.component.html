@@ -1,0 +1,14 @@
+<h2>List of Cool Dinos</h2>
+
+<button type="button" (click)="goToNew()">Add New Dinosaur</button>
+
+<div *ngFor="let dinosaur of dinosaurs">
+  <h3>
+    <a [title]="dinosaur.name + ' details'" [routerLink]="['/dinosaur', dinosaur.id]">
+      <img class="dinoImage" src="{{ dinosaur.imageUrl }}" />
+      <br />
+      {{ dinosaur.name }} ({{ dinosaur.fancyName }}) 
+    </a>
+    <button (click)="deleteDino(dinosaur.id)">Delete</button>
+  </h3>
+</div>
